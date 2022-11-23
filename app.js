@@ -20,6 +20,8 @@ app.use('/admin', createProxyMiddleware({
     changeOrigin: true,
     pathRewrite: rewritePath('/admin')
 }));
+
+
 app.use('/residents', createProxyMiddleware({
     target: 'http://localhost:8020',
     changeOrigin: true,
